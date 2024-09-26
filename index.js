@@ -8,23 +8,9 @@ document.addEventListener('click', function(event) {
 });
 
   
-document.addEventListener('touchstart', function(event) {
-    console.log(event.touches);
-    let touch = event.touches[0]; // Ambil posisi tap pertama
-    let x = touch.clientX;
-    let y = touch.clientY;
-  
-    console.log('Posisi tap:', x, y);
-});
+document.addEventListener('touchstart', tapClick);
 
-document.addEventListener('touchmove', function(event) {
-    console.log(event.touches);
-    let touch = event.touches[0]; // Ambil posisi tap pertama
-    let x = touch.clientX;
-    let y = touch.clientY;
-  
-    console.log('Posisi tap:', x, y);
-});
+document.addEventListener('touchmove',tapClick);
   
 function tapClick(event){
     if (event.touches.length > 0) {
