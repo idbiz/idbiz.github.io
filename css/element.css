@@ -21,5 +21,11 @@
     align-items: center;
     color: #fff;
     text-align: center;
-    border-radius: 20px;
+}
+
+@media screen and (max-width: 425px) {
+    .parallax {
+        height: 40vh;
+    }
+    
 }
