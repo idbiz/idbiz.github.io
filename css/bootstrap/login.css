@@ -230,7 +230,7 @@ input {
 }
 
 .overlay {
-    background-image: url('../img/Stirfry.gif');
+    background-image: url('/assets/Peace.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
