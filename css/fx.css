@@ -17,3 +17,8 @@
     transition: .5s;
     cursor: pointer;
 }
+
+.stroke {
+    text-shadow: 0 0 2px #201E43;
+    cursor: default;
+}
