@@ -38,3 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+////////////////////////////////////////////////////////
+
+const aboutUs = document.getElementById('abt-us');
+const signIn = document.getElementById('sign-in');
+
+aboutUs.addEventListener('click', () => {
+    window.location.href = '/pages/about_us.html';
+});
+
+signIn.addEventListener('click', () => {
+    window.location.href = '/pages/login.html';
+});

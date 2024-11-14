@@ -1,0 +1,25 @@
+.btn {
+    border: 1px solid #134B70;
+    padding: 4px 24px;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #171e4e;
+    transition: .5s;
+}
+
+.parallax {
+    background-image: url('https://img.freepik.com/premium-photo/memphisstyle-collage-business-people-work-ai-generated-illustration_866663-42122.jpg?w=1380');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
