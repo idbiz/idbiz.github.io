@@ -41,8 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ////////////////////////////////////////////////////////
 
+const home = document.getElementById('home');
 const aboutUs = document.getElementById('abt-us');
 const signIn = document.getElementById('sign-in');
+
+home.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 aboutUs.addEventListener('click', () => {
     window.location.href = '/pages/about_us.html';

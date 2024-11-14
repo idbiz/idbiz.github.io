@@ -11,8 +11,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Major+Mono+Display&family=Nabla&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&family=Tilt+Neon&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-[#201E43]">
+<body class="bg-[#201E43] font-['Poppins']">
 
   <!-- ## NAVBAR ## -->
   <nav class="flex grid grid-cols-2 px-2 xl:px-24 py-4 items-center top-0 sticky backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80">
@@ -28,7 +32,7 @@
     </div>
     <div>
       <ul id="menu-list" class="flex justify-between items-center">
-        <li class="linked">Home</li>
+        <li id="home" class="linked">Home</li>
         <li id="abt-us" class="linked">About Us</li>
         <li class="linked">Services</li>
         <li class="linked">Become a Seller</li>
@@ -46,22 +50,80 @@
   <!-- ## HEADER ## -->
   <header class="flex flex-col items-center justify-center my-12 mx-24">
     <div class="parallax flex flex-col gap-12">
-      <div class="text-6xl">
+      <div class="text-6xl font-semibold stroke">
         <p>Realisasikan Idemu</p>
         <p>Perluas Jaringanmu</p>
       </div>
+
       <div class="flex items-center gap-2 bg-[#201E43] rounded-xl">
         <input type="search" name="" id="cari"
           class="w-[28rem] h-12 px-4 text-black focus:outline-none rounded-xl"
           placeholder="Cari layanan yang tersedia" 
         />
-        <div class="flex items-center gap-2 pr-2">
+        <div id="cari" class="flex items-center gap-2 pr-2 cursor-pointer">
           <p>Cari</p><i class="ph ph-magnifying-glass"></i>
         </div>
       </div>
     </div>
   </header>
 <!-- ## END HEADER ## -->
+
+<!-- ## Services ## -->
+<section class="mx-24">
+  <div class="text-white">
+    <h1 class="text-4xl font-bold">Popular Services</h1>
+    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+  </div>
+  <div class="grid grid-cols-5 gap-4 mt-8">
+
+    <!-- ## Card 1 ## -->
+    <div class="bg-white flex flex-col items-center rounded-lg py-8 gap-4">
+      <p class="font-semibold">Poster Design</p>
+      <i class="ph ph-note-blank text-8xl"></i>
+      <div class="border border-[#201E43] linked2 rounded-lg">
+        <P class="px-12">Lihat</P>
+      </div>
+    </div>
+
+    <!-- ## Card 2 ## -->
+    <div class="bg-white flex flex-col items-center rounded-lg py-8 gap-4">
+      <p class="font-semibold">Banner Design</p>
+      <i class="ph ph-printer text-8xl"></i>
+      <div class="border border-[#201E43] linked2 rounded-lg">
+        <P class="px-12">Lihat</P>
+      </div>
+    </div>
+
+    <!-- ## Card 3 ## -->
+    <div class="bg-white flex flex-col items-center rounded-lg py-8 gap-4">
+      <p class="font-semibold">Photography</p>
+      <i class="ph ph-camera text-8xl"></i>
+      <div class="border border-[#201E43] linked2 rounded-lg">
+        <P class="px-12">Lihat</P>
+      </div>
+    </div>
+
+    <!-- ## Card 4 ## -->
+    <div class="bg-white flex flex-col items-center rounded-lg py-8 gap-4">
+      <p class="font-semibold">Photo Editing</p>
+      <i class="ph ph-images text-8xl"></i>
+      <div class="border border-[#201E43] linked2 rounded-lg">
+        <P class="px-12">Lihat</P>
+      </div>
+    </div>
+
+    <!-- ## Card 5 ## -->
+    <div class="bg-white flex flex-col items-center rounded-lg py-8 gap-4">
+      <p class="font-semibold">Video Editing</p>
+      <i class="ph ph-film-strip text-8xl"></i>
+      <div class="border border-[#201E43] linked2 rounded-lg">
+        <P class="px-12">Lihat</P>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ## END Services ## -->
 
 
   <script src="/js/nav.js"></script>

@@ -56,8 +56,6 @@ photoInput.addEventListener('change', () => {
 
 // Fungsi untuk memvalidasi dan mengosongkan form
 function validateForm() {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
   const category = document.getElementById('category').value;
   const comment = document.getElementById('comment').value.trim();
   const otherNoteText = document.getElementById('otherNoteText').value.trim();
@@ -73,8 +71,6 @@ function validateForm() {
 
 // Fungsi untuk mengosongkan semua input form
 function clearForm() {
-  document.getElementById('name').value = '';
-  document.getElementById('email').value = '';
   document.getElementById('category').value = '';
   document.getElementById('comment').value = '';
   document.getElementById('otherNoteText').value = '';
