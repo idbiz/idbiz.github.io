@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.linked, .linked-btn {
+.linked, .linked-btn, .linked2 {
     transition: .5s;
     cursor: pointer;
 }
@@ -21,4 +21,11 @@
 .stroke {
     text-shadow: 0 0 2px #201E43;
     cursor: default;
+}
+
+.linked2:hover {
+    color: #EEEEEE;
+    transition: .5s;
+    background-color: #201E43;
+    cursor: pointer;
 }
