@@ -35,6 +35,10 @@
 
 .mansory img {
     margin-bottom: 18px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 

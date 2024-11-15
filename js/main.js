@@ -45,6 +45,7 @@ const home = document.getElementById('home');
 const aboutUs = document.getElementById('abt-us');
 const signIn = document.getElementById('sign-in');
 const join = document.getElementById('join-in');
+const catalog = document.querySelector('.mansory');
 
 home.addEventListener('click', () => {
     window.scrollTo({
@@ -63,4 +64,8 @@ signIn.addEventListener('click', () => {
 
 join.addEventListener('click', () => {
     window.location.href = '/pages/login.html';
+});
+
+catalog.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
 });
