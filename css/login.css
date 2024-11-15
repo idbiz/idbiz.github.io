@@ -6,7 +6,7 @@
 
 body {
   display: flex;
-  background-color: #f6f5f7;
+  background-color: #201E43;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -79,20 +79,6 @@ a:hover {
   font-size: 14px;
   user-select: none;
   padding-left: 5px;
-}
-
-.back-button {
-    position: fixed;
-    top: 0px;
-    left: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius:10px;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: none;
 }
 
 button {
@@ -327,6 +313,13 @@ input {
   border: 1px solid #4bb6b7;
 }
 
+.back {
+  font-size: 4vh;
+  position: absolute;
+  margin: 1vh;
+  z-index: 200;
+  cursor: pointer;
+}
 
 /* Responsive */
 @media screen and (max-width: 768px) {
