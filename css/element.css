@@ -29,6 +29,10 @@
     margin-bottom: 2vh;
 }
 
+.footer-list a:hover {
+    text-decoration: underline;
+}
+
 
 
 

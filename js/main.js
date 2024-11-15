@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const home = document.getElementById('home');
 const aboutUs = document.getElementById('abt-us');
 const signIn = document.getElementById('sign-in');
+const join = document.getElementById('join-in');
 
 home.addEventListener('click', () => {
     window.scrollTo({
@@ -57,5 +58,9 @@ aboutUs.addEventListener('click', () => {
 });
 
 signIn.addEventListener('click', () => {
+    window.location.href = '/pages/login.html';
+});
+
+join.addEventListener('click', () => {
     window.location.href = '/pages/login.html';
 });
