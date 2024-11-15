@@ -409,7 +409,7 @@ input {
       .overlay-panel {
         position: absolute;
         display: flex;
-        /* align-items: center; */
+        align-items: start;
         justify-content: center;
         flex-direction: column;
         padding: 0 40px;
@@ -424,5 +424,21 @@ input {
       span {
         font-size: 12px;
         margin-top: 25px;
+      }
+
+      input {
+        background-color: #eee;
+        border-radius: 10px;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 90%;
+      }
+
+      .content .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
       }
 }
