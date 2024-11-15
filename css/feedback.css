@@ -1,12 +1,17 @@
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Mengubah gaya dan animasi pada judul */
+/* Mengubah font untuk seluruh halaman */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e0f7fa;
+}
+
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #0288d1;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -24,21 +29,15 @@ h2 {
 
 /* Gaya header */
 header {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
 }
 
-/* Efek hover untuk menambah skala */
+/* Efek hover untuk menambah skala pada judul */
 h2:hover {
   transform: scale(1.1);
   color: #0277bd;
   text-shadow: 0px 4px 6px rgba(2, 136, 209, 0.4);
-}
-
-
-/* Mengubah warna latar belakang form */
-body {
-  background-color: #e0f7fa;
 }
 
 .bg-white {
@@ -51,12 +50,6 @@ body {
 .bg-white:hover {
   transform: scale(1.02);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-  color: #0288d1;
-  font-size: 2.5rem;
-  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -136,6 +129,7 @@ button {
   border-radius: 0.5rem;
   box-shadow: 0px 4px 15px rgba(3, 155, 229, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
@@ -144,13 +138,14 @@ button:hover {
   box-shadow: 0px 6px 20px rgba(3, 155, 229, 0.6);
 }
 
-/* Gaya footer dengan teks putih */
+/* Gaya footer */
 footer {
   background-color: #0288d1;
-  color: #ffffff !important;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 footer p {
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 5px 0;
 }
