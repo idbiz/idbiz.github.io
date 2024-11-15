@@ -29,3 +29,15 @@
     background-color: #201E43;
     cursor: pointer;
 }
+
+.no-copy {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+.text-shadow {
+    text-shadow: #7b00ff 0px 0px 150px;
+}

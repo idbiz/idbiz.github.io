@@ -9,8 +9,10 @@
     transition: .5s;
 }
 
-.parallax {
-    background-image: url('https://img.freepik.com/premium-photo/memphisstyle-collage-business-people-work-ai-generated-illustration_866663-42122.jpg?w=1380');
+.banner {
+    background-image: url('../assets/img/geometric.jpg');
+    /* background-color: rgba(0, 0, 0, 0.2); 
+    background-blend-mode: multiply;  */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,6 +24,10 @@
     color: #fff;
     text-align: center;
 }
+
+
+
+
 
 @media screen and (max-width: 425px) {
     .parallax {
