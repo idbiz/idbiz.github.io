@@ -1,14 +1,14 @@
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 /* Mengubah font untuk seluruh halaman */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
   background-color: #e0f7fa;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
   color: #0288d1;
   font-size: 2.5rem;
   font-weight: 700;
@@ -29,7 +29,7 @@ h2 {
 
 /* Gaya header */
 header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1.2rem;
 }
 
@@ -54,6 +54,7 @@ h2:hover {
 
 p {
   color: #546e7a;
+  font-family: 'Lora', serif;
 }
 
 /* Gaya input dan textarea */
@@ -129,7 +130,7 @@ button {
   border-radius: 0.5rem;
   box-shadow: 0px 4px 15px rgba(3, 155, 229, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 button:hover {
@@ -142,7 +143,7 @@ button:hover {
 footer {
   background-color: #0288d1;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 footer p {
