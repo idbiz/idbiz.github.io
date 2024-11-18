@@ -3,6 +3,7 @@ const portfolioItems = [
     { id: 1, name: 'Modern Website Design', price: 120, image: 'https://via.placeholder.com/150' },
     { id: 2, name: 'E-commerce UI', price: 150, image: 'https://via.placeholder.com/150' },
     { id: 3, name: 'Mobile App Prototype', price: 200, image: 'https://via.placeholder.com/150' },
+    { id: 3, name: 'Photography', price: 200, image: 'https://via.placeholder.com/150' },
   ];
   
   // Cart data
@@ -81,4 +82,5 @@ const portfolioItems = [
     cart = [];
     renderCart();
   });
+  
   

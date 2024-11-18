@@ -64,14 +64,17 @@
   <!-- Cart Section -->
   <aside class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 p-4">
     <h2 class="text-lg font-bold">Cart</h2>
-    <div id="cart" class="mt-2 space-y-2"></div>
-    <div class="mt-4">
+    <div id="cartItems" class="mt-2 space-y-2"></div>
+    <div class="mt-4 flex justify-between items-center">
       <span id="totalPrice" class="text-lg font-semibold">Total: $0</span>
       <button id="checkout" class="ml-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
         Checkout
       </button>
     </div>
   </aside>
+
+  <!-- Container untuk chart dan cart -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-20 pb-24 sm:pb-32">
 
   <!-- Scripts -->
   <script src="/js/portofolio.js"></script>
