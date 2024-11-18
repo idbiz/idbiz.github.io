@@ -1,0 +1,62 @@
+/* style.css */
+
+/* Custom hover effect for portfolio items */
+.portfolio-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Styling for the cart section */
+#cart {
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4A90E2 #F3F4F6; /* Custom scrollbar colors */
+  border: 1px solid #E5E7EB; /* Light border for distinction */
+  padding: 8px; /* Add padding for better spacing */
+  background-color: #FAFAFA; /* Light background */
+}
+
+#cart::-webkit-scrollbar {
+  width: 10px;
+}
+
+#cart::-webkit-scrollbar-thumb {
+  background-color: #4A90E2; /* Thumb color */
+  border-radius: 6px;
+  border: 2px solid #FAFAFA; /* Thumb contrast */
+}
+
+#cart::-webkit-scrollbar-track {
+  background-color: #F3F4F6; /* Track color */
+  border-radius: 6px; /* Rounded corners for the track */
+}
+
+/* Custom checkout button styles */
+#checkout {
+  background-color: #2563EB; /* Primary blue */
+  color: #FFFFFF; /* Text color */
+  font-weight: bold; /* Emphasize the button */
+  border: none; /* Clean design */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease;
+}
+
+#checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  background-color: #1D4ED8; /* Darker blue on hover */
+}
+
+/* Responsive enhancements */
+@media (min-width: 768px) {
+  #cart {
+    max-height: 200px; /* Increase height on larger screens */
+    padding: 16px; /* Add more padding */
+  }
+  #checkout {
+    padding: 12px 24px; /* Bigger button for larger screens */
+    border-radius: 8px; /* Rounded button */
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/portofolio.css">
+  <link rel="stylesheet" href="/css/element.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- ## NAVBAR ## -->
+  <nav class="flex items-center sticky top-0 backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 
+              grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img 
+          class="rounded-full h-8 w-8"
+          src="http://qplexus.com/wp-content/uploads/2016/02/default-logo.png" 
+          alt="Logo"
+        />
+        <h1 class="font-bold text-2xl">idBiz.</h1>
+      </div>
+      <div id="menu-collapse" class="text-2xl flex items-center justify-end md:hidden">
+        <i class="ph ph-list"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4">
+    <h1 class="text-center text-2xl font-bold">Portfolio Store</h1>
+  </header>
+
+  <!-- Portfolio Section -->
+  <main class="p-6">
+    <h2 class="text-xl font-semibold mb-4">Our Designs</h2>
+    <div id="portfolio" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+  </main>
+
+  <!-- Cart Section -->
+  <aside class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 p-4">
+    <h2 class="text-lg font-bold">Cart</h2>
+    <div id="cart" class="mt-2 space-y-2"></div>
+    <div class="mt-4">
+      <span id="totalPrice" class="text-lg font-semibold">Total: $0</span>
+      <button id="checkout" class="ml-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="/js/portofolio.js"></script>
+  <script src="/js/nav.js"></script>
+</body> 
+</html>
