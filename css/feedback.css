@@ -131,3 +131,15 @@ footer p {
   color: #ffffff;
   margin: 5px 0;
 }
+
+/* Feedback Form Custom Styles */
+@media (min-width: 768px) {
+  section.flex > div {
+    gap: 2rem;
+  }
+}
+
+#lottie-container {
+  width: 100%;
+  max-width: 300px;
+}
