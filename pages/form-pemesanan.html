@@ -1,108 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Pemesanan</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-</head>
-<body class="bg-gradient-to-br from-blue-50 to-blue-100">
-  <div class="container mx-auto px-4 py-12">
-    <!-- Form Container -->
-    <div id="form-container" class="max-w-3xl mx-auto p-8 rounded-xl shadow-2xl bg-white/30 backdrop-blur-lg border border-gray-200 opacity-0 translate-y-10">
-      <!-- Header -->
-      <div class="text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Form Pemesanan Jasa Desain</h1>
-        <p class="text-gray-600">Lengkapi detail pesanan Anda dan kami akan segera menghubungi Anda!</p>
+    <script src="../js/pemesanan.js"></script>
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-blue-100">
+    <!-- CONTENT  -->
+    <div class="container mx-auto px-4 py-12">
+      <!-- Form Container -->
+      <div
+        id="form-container"
+        class="max-w-3xl mx-auto p-8 rounded-xl shadow-2xl bg-white/30 backdrop-blur-lg border border-gray-200 opacity-0 translate-y-10"
+      >
+        <!-- Header -->
+        <div class="text-center">
+          <h1 class="text-3xl font-bold text-gray-800 mb-2">
+            Form Pemesanan Jasa Desain
+          </h1>
+          <p class="text-gray-600">
+            Lengkapi detail pesanan Anda sebelum melakukan pemesanan!
+          </p>
+        </div>
+
+        <form id="orderForm" action="/submit-order" method="POST" class="mt-8 space-y-6">
+          <!-- Nama dan Email -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Nama -->
+            <div class="input-group">
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nama Lengkap"
+                required
+                class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+              />
+            </div>
+
+            <!-- No Telp -->
+            <div class="input-group">
+              <label for="phone" class="block text-sm font-medium text-gray-700"
+                >Nomor Telepon</label
+              >
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Nomor telepon"
+                required
+                class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+              />
+            </div>
+
+            <!-- Jenis Desain -->
+            <div class="input-group">
+              <label
+                for="designType"
+                class="block text-sm font-medium text-gray-700"
+                >Jenis Desain</label
+              >
+              <select
+                id="designType"
+                name="designType"
+                required
+                class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+              >
+                <option value="pilih" disabled selected>
+                  Pilih Jenis Desain
+                </option>
+                <option value="logo">Desain Logo</option>
+                <option value="brochure">Desain Brosur</option>
+                <option value="poster">Desain Poster</option>
+                <option value="other">Lainnya</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Deskripsi -->
+          <div class="input-group">
+            <label
+              for="description"
+              class="block text-sm font-medium text-gray-700"
+              >Deskripsi Pesanan</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Masukkan deskripsi pesanan"
+              rows="4"
+              required
+              class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+            ></textarea>
+          </div>
+
+          <!-- File Upload (Optional) -->
+          <div class="input-group">
+            <label for="file" class="block text-sm font-medium text-gray-700"
+              >Upload Referensi (opsional)</label
+            >
+            <input
+              type="file"
+              id="file"
+              name="file"
+              class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+            />
+          </div>
+
+          <!-- Submit -->
+          <div class="flex justify-center mt-6 space-x-4">
+            <button
+              onclick="return window.location.href='../index.html'"
+              type="button"
+              class="px-6 py-3 bg-gray-600 text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 shadow-lg"
+            >
+              Kembali
+            </button>
+            <button
+              type="submit"
+              class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
+            >
+              Kirim Pesanan
+            </button>
+          </div>
+        </form>
       </div>
-      <form action="/submit-order" method="POST" class="mt-8 space-y-6">
-        <!-- Nama dan Email -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Nama -->
-          <div class="input-group">
-            <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-            <input type="text" id="name" name="name" placeholder="Nama Lengkap" required 
-              class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm">
-          </div>
-          <!-- Email -->
-          <div class="input-group">
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required 
-              class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm">
-          </div>
-        </div>
-        <!-- Jenis Desain -->
-        <div class="input-group">
-          <label for="designType" class="block text-sm font-medium text-gray-700">Jenis Desain</label>
-          <select id="designType" name="designType" required 
-            class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm">
-            <option value="pilih">Pilih Jenis Desain</option>
-            <option value="logo">Desain Logo</option>
-            <option value="brochure">Desain Brosur</option>
-            <option value="poster">Desain Poster</option>
-            <option value="other">Lainnya</option>
-          </select>
-        </div>
-        <!-- Deskripsi -->
-        <div class="input-group">
-          <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi Pesanan</label>
-          <textarea id="description" name="description" placeholder="Masukkan deskripsi pesanan" rows="4" required 
-            class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"></textarea>
-        </div>
-        <!-- File Upload -->
-        <div class="input-group">
-          <label for="file" class="block text-sm font-medium text-gray-700">Upload Referensi (opsional)</label>
-          <input type="file" id="file" name="file" 
-            class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm">
-        </div>
-        <!-- Submit -->
-        <div class="flex justify-center mt-6 space-x-4">
-          <button type="button" 
-            class="px-6 py-3 bg-gray-600 text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 shadow-lg">
-            Kembali
-          </button>
-          <button type="submit" 
-            class="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg">
-            Kirim Pesanan
-          </button>
-        </div>
-        
-      </form>
     </div>
-  </div>
-  <script>
-    // GSAP Animation
-    document.addEventListener("DOMContentLoaded", () => {
-      const formContainer = document.getElementById("form-container");
+    <!-- CONTENT END -->
 
-      // Fade-in and slide-up animation
-      gsap.to(formContainer, {
-        opacity: 1,
-        translateY: 0,
-        duration: 1,
-        ease: "power2.out",
-      });
-
-      // Focus animation for inputs
-      const inputFields = document.querySelectorAll(".input-field");
-      inputFields.forEach((input) => {
-        input.addEventListener("focus", () => {
-          gsap.to(input, {
-            scale: 1.05,
-            duration: 0.3,
-            ease: "power1.out",
-          });
-        });
-        input.addEventListener("blur", () => {
-          gsap.to(input, {
-            scale: 1,
-            duration: 0.3,
-            ease: "power1.out",
-          });
-        });
-      });
-    });
-  </script>
-</body>
+  </body>
 </html>
