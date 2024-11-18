@@ -9,7 +9,7 @@ body {
 
 h2 {
   font-family: 'Lora', serif;
-  color: #0288d1;
+  color: #32305d;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -90,17 +90,26 @@ p {
   animation: scaleUp 0.3s ease;
 }
 
-/* Gaya pada area unggahan */
+/* Upload area */
 .upload-area {
-  border: 2px dashed #64b5f6;
-  background-color: #bbdefb;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: #a8a8b8; /* Sama dengan warna header/footer */
+  border: 2px dashed #6b7280; /* Garis putus-putus warna abu-abu */
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  color: #d1d5db; /* Warna teks yang lebih terang */
 }
 
 .upload-area:hover {
-  border-color: #0288d1;
-  background-color: #e1f5fe;
+  background-color: #474658; /* Sedikit lebih terang saat hover */
 }
+
+/* Placeholder teks */
+.upload-area #fileName {
+  color: #d1d5db; /* Warna teks lebih terang */
+}
+
 
 /* Gaya tombol submit */
 button {
