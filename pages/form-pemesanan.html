@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Pemesanan</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -29,7 +36,12 @@
           </p>
         </div>
 
-        <form id="orderForm" action="/submit-order" method="POST" class="mt-8 space-y-6">
+        <form
+          id="orderForm"
+          action="/submit-order"
+          method="POST"
+          class="mt-8 space-y-6"
+        >
           <!-- Nama dan Email -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Nama -->
@@ -38,12 +50,12 @@
                 >Nama Lengkap</label
               >
               <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Nama Lengkap"
-                required
-                class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nama Lengkap"
+              required
+              class="input-field w-full mt-1 px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500 border-gray-300 shadow-sm"
               />
             </div>
 
@@ -142,7 +154,7 @@
             </button>
             <button
               type="submit"
-              class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
+              class="px-6 py-3 bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
             >
               Kirim Pesanan
             </button>
@@ -151,6 +163,5 @@
       </div>
     </div>
     <!-- CONTENT END -->
-
   </body>
 </html>
