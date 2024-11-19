@@ -3,7 +3,9 @@ const portfolioItems = [
     { id: 1, name: 'Modern Website Design', price: 120000, image: 'https://via.placeholder.com/150' },
     { id: 2, name: 'E-commerce UI', price: 150000, image: 'https://via.placeholder.com/150' },
     { id: 3, name: 'Mobile App Prototype', price: 20000, image: 'https://via.placeholder.com/150' },
-    { id: 3, name: 'Photography', price: 20000, image: 'https://via.placeholder.com/150' },
+    { id: 4, name: 'Photography', price: 20000, image: 'https://via.placeholder.com/150' },
+    { id: 5, name: 'Design Graphis', price: 160000, image: 'https://via.placeholder.com/150' },
+    { id: 6, name: 'Dasboard Design', price: 140000, image: 'https://via.placeholder.com/150' },
   ];
   
   // Cart data
