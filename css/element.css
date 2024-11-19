@@ -25,6 +25,20 @@
     text-align: center;
 }
 
+.top-banner {
+    background-image: url('../assets/img/landscape-geometric.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
 .footer-list a {
     margin-bottom: 2vh;
 }
