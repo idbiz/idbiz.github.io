@@ -57,6 +57,16 @@ p {
   font-family: 'Lora', serif;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Pastikan tetap di atas elemen lainnya */
+  background-color: rgba(31, 41, 55, 0.8); /* Latar belakang */
+  backdrop-filter: blur(10px); /* Opsional */
+}
+
+
 /* Gaya hover pada bintang */
 .star {
   cursor: pointer;

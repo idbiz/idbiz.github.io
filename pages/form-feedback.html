@@ -69,16 +69,16 @@
   </header> -->
 
   <!--MAIN-->
-  <section class="text-gray-600 body-font bg-white dark:bg-[#201E43] flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg my-8 transition-transform transform hover:scale-105 duration-300">
-      <h2 class="text-4xl font-bold text-center">Feedback Form</h2>
-      <p class="text-gray-500 text-center mb-1">Your opinion matters to us! </p>
-      <p class="text-gray-500 text-center mb-8">Please share your experience.</p>
-    
+  <!-- <section class="text-gray-600 body-font bg-white dark:bg-[#201E43] flex items-center justify-center min-h-screen">
+    <div class="bg-gradient-to-br from-[#2A285C] to-[#3C396F] p-10 rounded-3xl shadow-2xl w-full max-w-4xl my-8 transition-transform transform hover:scale-105 duration-300">
+      <h2 class="text-5xl font-bold text-center text-white mb-4">Feedback Form</h2>
+      <p class="text-gray-300 text-center mb-2 text-lg">Your opinion matters to us!</p>
+      <p class="text-gray-300 text-center mb-8 text-lg">Please share your experience.</p>
+  
       <div class="mb-6">
-        <label for="category" class="block text-gray-700 font-bold mb-2">Feedback Category</label>
-        <select id="category" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-          <option value="" disabled selected hidden>Select category</option>      
+        <label for="category" class="block text-white font-semibold mb-2">Feedback Category</label>
+        <select id="category" class="w-full px-5 py-4 border-none rounded-lg bg-white focus:outline-none focus:ring-4 focus:ring-blue-500 text-gray-700 text-lg">
+          <option value="" disabled selected hidden>Select category</option>
           <option>Service Quality</option>
           <option>Product Quality</option>
           <option>Price</option>
@@ -87,8 +87,8 @@
       </div>
   
       <div id="otherNote" class="mb-6 hidden">
-        <label for="otherNoteText" class="block text-gray-700 font-medium mb-2">Please specify</label>
-        <textarea id="otherNoteText" rows="3" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Enter feedback category"></textarea>
+        <label for="otherNoteText" class="block text-white font-semibold mb-2">Please specify</label>
+        <textarea id="otherNoteText" rows="3" class="w-full px-5 py-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-4 focus:ring-yellow-400 text-gray-700 text-lg" placeholder="Enter feedback category"></textarea>
       </div>
   
       <div class="flex justify-center mb-8" id="starRating">
@@ -107,32 +107,79 @@
         <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="5">
           <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
         </svg>
-        <hr>
-      </div>
-  
-      <div class="flex justify-center mb-8" id="emojiContainer">
-        <span id="emoji" class="text-4xl"></span>
       </div>
   
       <div class="mb-6">
-        <label for="comment" class="block text-gray-700 font-bold mb-2">Comments</label>
-        <textarea id="comment" rows="4" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Share your experience here"></textarea>
+        <label for="comment" class="block text-white font-semibold mb-2">Comments</label>
+        <textarea id="comment" rows="5" class="w-full px-5 py-4 rounded-lg bg-gray-100 focus:outline-none focus:ring-4 focus:ring-yellow-400 text-gray-700 text-lg" placeholder="Share your experience here"></textarea>
       </div>
   
       <div class="mb-6">
-        <label for="photo" class="block text-gray-700 font-bold mb-2">Upload Photo (optional)</label>
-        <div class="upload-area" onclick="document.getElementById('photo').click();">
-          <span id="fileName" class="text-gray-500">Choose a file...</span>
+        <label for="photo" class="block text-white font-semibold mb-2">Upload Photo (optional)</label>
+        <div class="upload-area bg-gray-100 rounded-lg py-4 px-6 cursor-pointer hover:bg-gray-200 transition-all duration-300" onclick="document.getElementById('photo').click();">
+          <span id="fileName" class="text-gray-500 text-lg">Choose a file...</span>
         </div>
         <input type="file" id="photo" accept="image/*" style="display: none;">
       </div>
   
-      <button onclick="validateForm()" class="w-full py-2 bg-gradient-to-r from-[#201E43] to-[#2A285C] text-white font-semibold rounded-md shadow-md hover:from-[#2A285C] hover:to-[#3C396F] transform hover:scale-105 transition duration-300 text-sm">
+      <button onclick="validateForm()" class="w-full py-4 text-lg bg-gradient-to-r from-[#3C396F] to-[#201E43] text-white font-bold rounded-lg shadow-lg hover:from-[#201E43] hover:to-[#2A285C] transform hover:scale-105 transition duration-300">
         Submit Feedback
       </button>
+    </div>
+  </section> -->
 
+  <section class="text-gray-600 body-font flex items-center justify-center min-h-screen">
+    <div class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-4xl my-8">
+      <h2 class="text-5xl font-bold text-center text-gray-800 mb-4">Feedback Form</h2>
+      <p class="text-gray-500 text-center mb-2 text-lg">Your opinion matters to us!</p>
+      <p class="text-gray-500 text-center mb-8 text-lg">Please share your experience.</p>
+  
+      <div class="mb-6">
+        <label for="category" class="block text-gray-700 font-semibold mb-2 text-base">Feedback Category</label>
+        <select id="category" class="w-full px-5 py-4 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 text-base">
+          <option value="" disabled selected hidden>Select category</option>
+          <option>Service Quality</option>
+          <option>Product Quality</option>
+          <option>Price</option>
+          <option>Others</option>
+        </select>
+      </div>
+  
+      <div id="otherNote" class="mb-6 hidden">
+        <label for="otherNoteText" class="block text-gray-700 font-semibold mb-2 text-base">Please specify</label>
+        <textarea id="otherNoteText" rows="3" class="w-full px-5 py-4 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-700 text-base" placeholder="Enter feedback category"></textarea>
+      </div>
+  
+      <div class="flex justify-center mb-8" id="starRating">
+        <!-- Stars -->
+        <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="1">
+          <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
+        </svg>
+        <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="2">
+          <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
+        </svg>
+        <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="3">
+          <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
+        </svg>
+        <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="4">
+          <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
+        </svg>
+        <svg class="star w-10 h-10 text-gray-300 hover:text-yellow-400" fill="currentColor" viewBox="0 0 20 20" data-value="5">
+          <path d="M10 15l5.09 3.26-1.62-6.51L18 7.76l-6.55-.52L10 1 8.55 7.24 2 7.76l4.53 4.99L4.91 18z" />
+        </svg>
+      </div>
+  
+      <div class="mb-6">
+        <label for="comment" class="block text-gray-700 font-semibold mb-2 text-base">Comments</label>
+        <textarea id="comment" rows="5" class="w-full px-5 py-4 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-700 text-base" placeholder="Share your experience here"></textarea>
+      </div>
+  
+      <button onclick="validateForm()" class="w-full py-4 text-lg bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transform hover:scale-105 transition duration-300">
+        Submit Feedback
+      </button>
     </div>
   </section>
+  
   
   <!-- ## FOOTER ## -->
   <footer class="bg-gray-900 text-white py-8">
