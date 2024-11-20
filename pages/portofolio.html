@@ -3,93 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>idbiz.id - portfolio</title>
+  <title>idbiz.id - portofolio</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/css/portofolio.css">
-  <link rel="stylesheet" href="/css/fx.css">
+  <link rel="stylesheet" href="/css/portofolio.css "> <!-- Link ke style.css -->
   <link rel="stylesheet" href="/css/element.css">
+  <link rel="stylesheet" href="/css/fx.css">
 
-  <!-- Scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body class="bg-gray-100">
 
-  <!-- ## NAVBAR ## -->
-  <nav class="flex items-center sticky top-0 backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 
-              grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4">
+   <!-- ## NAVBAR ## -->
+  <nav class="flex items-center top-0 sticky backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 
+  grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4 ">
     <div class="flex items-center justify-between">
-      <!-- Logo and Brand Name -->
       <div class="flex items-center gap-2">
         <img 
           class="rounded-full h-8 w-8"
           src="http://qplexus.com/wp-content/uploads/2016/02/default-logo.png" 
-          alt="Logo"
+          alt=""
         />
-        <h1 class="font-bold text-2xl">idBiz.</h1>
+        <h1 class="font-bold text-2xl">
+          idBiz.
+        </h1>
       </div>
-      <!-- Mobile Menu Icon -->
-      <div id="menu-collapse" class="text-2xl flex items-center justify-end md:hidden">
+      <div id="menu-collapse" class="text-2xl flex items-center align-center justify-end linked md:hidden">
         <i class="ph ph-list"></i>
       </div>
     </div>
-    
-    <!-- Navigation Menu -->
+
     <div class="md:col-span-2 mt-2 md:m-0 no-copy">
       <ul id="menu-list" class="flex justify-between items-center text-xs md:text-md lg:text-lg gap-4 hidden md:flex">
-        <li id="home" class="linked">Home</li>
-        <li id="abt-us" class="linked">About Us</li>
-        <li class="linked">Services</li>
-        <li class="linked hidden md:block">Become a Seller</li>
-        <li class="cursor-default text-[#134B70] hidden md:block">|</li>
-        <li id="sign-in" class="linked">Sign In</li>
-        <li id="join-in" class="btn linked-btn">Join</li>
+        <li id="home" class="linked">
+          <a href="/index.html">Home</a>
+      </li>
+      <li id="abt-us" class="linked">
+          <a href="/pages/about_us.html">About Us</a>
+      </li>
+      <li class="linked">
+          <a href="">Services</a>
+      </li>
+      <li class="linked hidden md:block">
+          <a href="">Become a Seller</a>
+      </li>
+      <li class="cursor-default text-[#134B70] hidden md:block">|</li>
+      <li id="sign-in" class="linked">
+          <a href="/pages/login.html">Sign In</a>
+      </li>
+      <li id="join-in" class="btn linked-btn">
+          <a href="/pages/login.html">Join</a>
+      </li>
       </ul>
     </div>
+
   </nav>
   <!-- ## END NAVBAR ## -->
 
+
   <!-- Header -->
   <header class="bg-blue-900 text-white p-4">
-    <h1 class="text-center text-2xl font-bold">Portfolio Store</h1>
+    <h1 class="text-center text-2xl font-bold">Portofolio Store</h1>
   </header>
 
-  <!--Filters Section-->
+  <!-- Filters Section -->
   <section class="p-4 bg-white shadow-md">
-    <div class="flex-wrap gap-4 items-center justify-between">
-       <select class="p-2 border rounded-md">
-         <option>Service Options</option>
-         <option>Pro Services</option>
-         <option>Basic Services</option>
-       </select>
-        <select class="p-2 border rounded-md">
-          <option>Seller Details</option>
-          <option>Top Rated</option>
-          <option>New Sellers</option>
-        </select>
-        <select class="p-2 border rounded-md">
-          <option>Budget</option>
-          <option>under $100</option>
-          <option>$100 - $50</option>
-          <option>$50 - $40</option>
-        </select>
-        <select class="p-2 border rounded-md">
-          <option>Delivery Time</option>
-          <option>24 Hours</option>
-          <option>1 Week</option>
-        </select>
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <select class="p-2 border rounded-md">
+        <option>Service Options</option>
+        <option>Pro Services</option>
+        <option>Basic Services</option>
+      </select>
+      <select class="p-2 border rounded-md">
+        <option>Seller Details</option>
+        <option>Top Rated</option>
+        <option>New Sellers</option>
+      </select>
+      <select class="p-2 border rounded-md">
+        <option>Budget</option>
+        <option>Under $100</option>
+        <option>$100 - $500</option>
+      </select>
+      <select class="p-2 border rounded-md">
+        <option>Delivery Time</option>
+        <option>24 Hours</option>
+        <option>1 Week</option>
+      </select>
     </div>
   </section>
 
-  <!--Service Grid Section-->
+  <!-- Service Grid Section -->
   <main class="p-6">
-    <div id="portofolio" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div id="portofolioGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <!-- Cards will be dynamically added here -->
     </div>
   </main>
-  <!-- Scripts -->
-  <script src="/js/portofolio.js"></script>
+
+  <script src="/js/portofolio.js"></script> <!-- Link ke script.js -->
   <script src="/js/nav.js"></script>
   <script src="/js/main.js"></script>
 </body>
