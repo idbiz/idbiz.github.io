@@ -71,7 +71,7 @@ function displayArticles(index) {
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('block');
         const title = document.createElement('h4');
-        title.classList.add('text-gray-900', 'font-medium', 'leading-8', 'mb-9');
+        title.classList.add('text-white', 'font-medium', 'leading-8', 'mb-9');
         title.textContent = article.title;
         contentDiv.appendChild(title);
 
@@ -79,7 +79,7 @@ function displayArticles(index) {
         metaDiv.classList.add('flex', 'items-center', 'justify-between', 'font-medium');
 
         const author = document.createElement('h6');
-        author.classList.add('text-sm', 'text-gray-500');
+        author.classList.add('text-sm', 'text-orange-500');
         author.textContent = article.author || 'Unknown Author';
 
         const publishedAt = document.createElement('span');
