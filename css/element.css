@@ -55,8 +55,6 @@
     user-select: none;
 }
 
-
-
 @media screen and (max-width: 425px) {
     .parallax {
         height: 40vh;
