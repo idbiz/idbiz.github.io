@@ -49,7 +49,13 @@ const portofolio = [
 
 // Function to render portofolio dynamically
 const renderPortofolio = () => {
-  const grid = document.getElementById("serviceGrid");
+  const grid = document.getElementById("portofolioGrid");
+
+  // Pastikan grid ada dan tidak null
+  if (!grid) {
+    console.error("Element with ID 'portofolioGrid' not found");
+    return;
+  }
 
   // Clear grid before appending new content
   grid.innerHTML = "";
@@ -57,7 +63,7 @@ const renderPortofolio = () => {
   // Create and append each portofolio card dynamically
   portofolio.forEach((item) => {
     const card = document.createElement("div");
-    card.className = "bg-white shadow-md rounded-lg overflow-hidden";
+    card.className = "bg-white portofolio-card shadow-md rounded-lg overflow-hidden";
 
     card.innerHTML = `
       <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover">
@@ -78,6 +84,3 @@ const renderPortofolio = () => {
     grid.appendChild(card);
   });
 };
-
-// Call render function to populate grid when the page loads
-document.addEventListener("DOMContentLoaded", renderPortofolio);
