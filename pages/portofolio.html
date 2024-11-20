@@ -51,33 +51,43 @@
   <!-- ## END NAVBAR ## -->
 
   <!-- Header -->
-  <header class="bg-blue-900/80 text-white p-4">
+  <header class="bg-blue-900 text-white p-4">
     <h1 class="text-center text-2xl font-bold">Portfolio Store</h1>
   </header>
 
-  <!-- Portfolio Section -->
+  <!--Filters Section-->
+  <section class="p-4 bg-white shadow-md">
+    <div class="flex-wrap gap-4 items-center justify-between">
+       <select class="p-2 border rounded-md">
+         <option>Service Options</option>
+         <option>Pro Services</option>
+         <option>Basic Services</option>
+       </select>
+        <select class="p-2 border rounded-md">
+          <option>Seller Details</option>
+          <option>Top Rated</option>
+          <option>New Sellers</option>
+        </select>
+        <select class="p-2 border rounded-md">
+          <option>Budget</option>
+          <option>under $100</option>
+          <option>$100 - $50</option>
+          <option>$50 - $40</option>
+        </select>
+        <select class="p-2 border rounded-md">
+          <option>Delivery Time</option>
+          <option>24 Hours</option>
+          <option>1 Week</option>
+        </select>
+    </div>
+  </section>
+
+  <!--Service Grid Section-->
   <main class="p-6">
-    <h2 class="text-xl font-semibold mb-4">Our Designs</h2>
-    <div id="portfolio" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+    <div id="ServiceGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Cards will be dynamically added here -->
+    </div>
   </main>
-
-  <div id="portfolio" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
-
-<div class="mt-8">
-  <h2 class="text-xl font-semibold mb-4">Cart</h2>
-  <div id="cart" class="space-y-2"></div>
-  <p id="totalPrice" class="mt-4 text-lg font-bold">Total: <Rp class="0"></Rp></p>
-  
-  <!-- Kontainer untuk tombol -->
-  <div class="mt-4 text-right">
-    <button 
-      id="checkout" 
-      class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-700 w-auto">
-      Checkout
-    </button>
-  </div>
-</div>
-
   <!-- Scripts -->
   <script src="/js/portofolio.js"></script>
   <script src="/js/nav.js"></script>

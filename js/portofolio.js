@@ -1,93 +1,83 @@
-// Sample portfolio items
-const portfolioItems = [
-    { id: 1, name: 'Modern Website Design', price: 120000, image: 'https://via.placeholder.com/150' },
-    { id: 2, name: 'E-commerce UI', price: 150000, image: 'https://via.placeholder.com/150' },
-    { id: 3, name: 'Mobile App Prototype', price: 20000, image: 'https://via.placeholder.com/150' },
-    { id: 4, name: 'Photography', price: 20000, image: 'https://via.placeholder.com/150' },
-    { id: 5, name: 'Design Graphis', price: 160000, image: 'https://via.placeholder.com/150' },
-    { id: 6, name: 'Dasboard Design', price: 140000, image: 'https://via.placeholder.com/150' },
-  ];
-  
-  // Cart data
-  let cart = [];
+// Mock data for portofolio
+const portofolio = [
+  {
+    id: 1,
+    title: "Premium Shopify Dropshipping Store",
+    seller: "Ad by Irfan",
+    rating: 5.0,
+    reviews: 282,
+    price: 495,
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: 2,
+    title: "Professional Wix Website Design",
+    seller: "Ad by Chris S.",
+    rating: 5.0,
+    reviews: 643,
+    price: 295,
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: 3,
+    title: "WordPress Responsive Website",
+    seller: "Ad by Parshant R.",
+    rating: 4.9,
+    reviews: 355,
+    price: 195,
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: 4,
+    title: "Shopify Dropshipping Store",
+    seller: "Ad by Pankaj Maurya",
+    rating: 5.0,
+    reviews: 448,
+    price: 325,
+    image: "https://via.placeholder.com/300x200",
+  },
+  {
+    id: 5,
+    title: "Design & Develop Webflow Website",
+    seller: "Ala Uddin",
+    rating: 4.8,
+    reviews: 375,
+    price: 150,
+    image: "https://via.placeholder.com/300x200",
+  },
+];
 
-  //fungsi untuk format rupiah
-  function formatRupiah(number) {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR'}).format(number);
-  }
-  
-  // Render portfolio items
-const portfolioContainer = document.getElementById('portfolio');
-portfolioItems.forEach((item) => {
-  const itemDiv = document.createElement('div');
-  itemDiv.className = 'bg-white p-4 shadow-md rounded';
+// Function to render portofolio dynamically
+const renderPortofolio = () => {
+  const grid = document.getElementById("serviceGrid");
 
-  itemDiv.innerHTML = `
-    <img src="${item.image}" alt="${item.name}" class="w-full h-40 object-cover rounded mb-2">
-    <h3 class="text-lg font-semibold">${item.name}</h3>
-    <p class="text-gray-500">Price: ${formatRupiah(item.price)}</p>
-    <button 
-      class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700" 
-      onclick="addToCart(${item.id})">
-      Add to Cart
-    </button>
-  `;
+  // Clear grid before appending new content
+  grid.innerHTML = "";
 
-  portfolioContainer.appendChild(itemDiv);
-});
+  // Create and append each portofolio card dynamically
+  portofolio.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "bg-white shadow-md rounded-lg overflow-hidden";
 
-// Add item to cart
-function addToCart(id) {
-  const item = portfolioItems.find((item) => item.id === id);
-  cart.push(item);
-  renderCart();
-}
-
-// Render cart
-function renderCart() {
-  const cartContainer = document.getElementById('cart');
-  const totalPriceEl = document.getElementById('totalPrice');
-  cartContainer.innerHTML = '';
-
-  // Group items by ID and calculate quantity
-  const groupedItems = cart.reduce((acc, item) => {
-    acc[item.id] = acc[item.id]
-      ? { ...item, qty: acc[item.id].qty + 1 }
-      : { ...item, qty: 1 };
-    return acc;
-  }, {});
-
-  let totalPrice = 0;
-
-  // Render each grouped item in the cart
-  Object.values(groupedItems).forEach((item) => {
-    totalPrice += item.price * item.qty;
-
-    const cartItemDiv = document.createElement('div');
-    cartItemDiv.className = 'flex justify-between items-center';
-
-    cartItemDiv.innerHTML = `
-      <span>${item.name} x${item.qty}</span>
-      <span>${formatRupiah(item.price * item.qty)}</span>
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="font-bold text-lg">${item.title}</h2>
+        <p class="text-sm text-gray-600">by ${item.seller}</p>
+        <p class="text-yellow-500 my-2">${"⭐".repeat(Math.round(item.rating))} (${item.reviews} reviews)</p>
+        <p class="font-bold text-blue-600">From $${item.price}</p>
+      </div>
+      <div class="p-4 border-t">
+        <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full">
+          View Details
+        </button>
+      </div>
     `;
 
-    cartContainer.appendChild(cartItemDiv);
+    // Append the created card to the grid
+    grid.appendChild(card);
   });
+};
 
-  // Update total price
-  totalPriceEl.textContent = `Total: ${formatRupiah(totalPrice)}`;
-}
-
-// Checkout functionality
-document.getElementById('checkout').addEventListener('click', () => {
-  if (cart.length === 0) {
-    alert('Your cart is empty!');
-    return;
-  }
-
-  alert('Thank you for your purchase!');
-  cart = [];
-  renderCart();
-});
+// Call render function to populate grid when the page loads
+document.addEventListener("DOMContentLoaded", renderPortofolio);
