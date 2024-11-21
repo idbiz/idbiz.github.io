@@ -4,12 +4,7 @@ const stars = document.querySelectorAll('.star');
 const categorySelect = document.getElementById('category');
 const otherNote = document.getElementById('otherNote');
 const emojiContainer = document.getElementById('emoji');
-const emojis = ["😢", "😕", "😐", "😊", "😁"]; // Emotikon untuk setiap rating 1-5
 
-// Fungsi untuk mengubah emotikon berdasarkan rating
-function updateEmoji(rating) {
-  emojiContainer.textContent = emojis[rating - 1]; // Set emotikon sesuai rating
-}
 
 // Event listener untuk rating bintang
 stars.forEach(star => {
@@ -60,12 +55,12 @@ function validateForm() {
   const comment = document.getElementById('comment').value.trim();
   const otherNoteText = document.getElementById('otherNoteText').value.trim();
 
-  if (!name || !email || !category || !comment || selectedRating === 0 || 
+  if (!category || !comment || selectedRating === 0 || 
       (category === 'Others' && !otherNoteText)) {
     alert("Please fill out all fields before submitting.");
   } else {
     alert("Thank you for your feedback!");
-    clearForm(); 
+    clearForm(); // Panggil fungsi clearForm setelah submit sukses
   }
 }
 
