@@ -81,3 +81,4 @@ const renderPortofolio = () => {
 
 // Call render function to populate grid when the page loads
 document.addEventListener("DOMContentLoaded", renderPortofolio);
+
