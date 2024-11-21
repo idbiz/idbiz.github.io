@@ -3,8 +3,6 @@ const fileNameSpan = document.getElementById('fileName');
 const stars = document.querySelectorAll('.star');
 const categorySelect = document.getElementById('category');
 const otherNote = document.getElementById('otherNote');
-const emojiContainer = document.getElementById('emoji');
-
 
 // Event listener untuk rating bintang
 stars.forEach(star => {
@@ -66,19 +64,29 @@ function validateForm() {
 
 // Fungsi untuk mengosongkan semua input form
 function clearForm() {
+  // Reset dropdown kategori
   document.getElementById('category').value = '';
+  
+  // Reset komentar dan input teks lainnya
   document.getElementById('comment').value = '';
   document.getElementById('otherNoteText').value = '';
-  otherNote.classList.add('hidden'); 
-  photoInput.value = ''; 
-  fileNameSpan.textContent = 'Choose a file...'; 
-  emojiContainer.textContent = ''; 
-
-  // Reset rating
-  selectedRating = 0;
+  
+  // Sembunyikan bagian "Other Note"
+  otherNote.classList.add('hidden');
+  
+  // Reset input file
+  photoInput.value = '';
+  fileNameSpan.textContent = 'Choose a file...';
+  
+  // Kosongkan emoji
+  emojiContainer.textContent = '';
+  
+  // Reset rating bintang
+  selectedRating = 0; // Reset nilai rating
   stars.forEach(star => {
-    star.classList.remove('selected', 'text-yellow-400');
-    star.classList.add('text-gray-300');
+    star.classList.remove('selected', 'text-yellow-400'); // Hapus kelas bintang yang dipilih
+    star.classList.add('text-gray-300'); // Tambahkan kelas default
   });
 }
+
 
