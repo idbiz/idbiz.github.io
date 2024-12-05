@@ -59,11 +59,11 @@ aboutUs.addEventListener('click', () => {
 });
 
 signIn.addEventListener('click', () => {
-    window.location.href = '/pages/login.html';
+    window.location.href = '/login/form';
 });
 
 join.addEventListener('click', () => {
-    window.location.href = '/pages/login.html';
+    window.location.href = '/login/form';
 });
 
 catalog.addEventListener('contextmenu', function (e) {
