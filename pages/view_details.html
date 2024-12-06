@@ -12,9 +12,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
-<body>
-    <!-- ## NAVBAR ## -->
-    <nav class="flex items-center top-0 sticky backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4">
+<body class="bg-gray-100 text-gray-800">
+    <!-- NAVBAR -->
+    <nav class="flex items-center sticky top-0 backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <img class="rounded-full h-12 w-12" src="/assets/img/idbiz.png" alt="idBiz Logo" />
@@ -24,161 +24,92 @@
                 <i class="ph ph-list"></i>
             </div>
         </div>
-
         <div class="md:col-span-2 mt-2 md:m-0 no-copy">
             <ul id="menu-list" class="flex justify-between items-center text-xs md:text-md lg:text-lg gap-4 hidden md:flex">
-                <li id="home" class="linked">
-                    <a href="/index.html">Home</a>
-                </li>
-                <li id="abt-us" class="linked">
-                    <a href="/pages/about_us.html">About Us</a>
-                </li>
-                <li class="linked">
-                    <a href="#">Services</a>
-                </li>
-                <li class="linked hidden md:block">
-                    <a href="#">Become a Seller</a>
-                </li>
+                <li><a href="/index.html" class="linked">Home</a></li>
+                <li><a href="/pages/about_us.html" class="linked">About Us</a></li>
+                <li><a href="#" class="linked">Services</a></li>
+                <li><a href="#" class="linked hidden md:block">Become a Seller</a></li>
                 <li class="cursor-default text-[#134B70] hidden md:block">|</li>
-                <li id="sign-in" class="linked">
-                    <a href="/pages/login.html">Sign In</a>
-                </li>
-                <li id="join-in" class="btn linked-btn">
-                    <a href="/pages/login.html">Join</a>
-                </li>
+                <li><a href="/pages/login.html" class="linked">Sign In</a></li>
+                <li><a href="/pages/login.html" class="btn linked-btn">Join</a></li>
             </ul>
         </div>
     </nav>
-    <!-- ## END NAVBAR ## -->
+    <!-- END NAVBAR -->
 
-    <main>
-        <h1>John Doe</h1>
-        <div class="profile-container">
-            <img src="profile-image.jpg" alt="John Doe" class="profile-image">
-            <div class="profile-info">
-                <p class="bio">
-                    John Doe is a talented graphic designer specializing in branding, UX/UI design, and illustration.
-                    With over 10 years of experience in the design industry, John has worked with top brands to create
-                    visually compelling and user-friendly designs.
-                </p>
-                <p class="expertise">
-                    <strong>Expertise:</strong><br>
-                    - Graphic Design<br>
-                    - UX/UI Design<br>
-                    - Web Design<br>
-                    - Illustration<br>
-                </p>
-                <p class="contact">
-                    <strong>Contact Information:</strong><br>
-                    Email: john.doe@example.com<br>
-                    Phone: +123-456-7890
-                </p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a> |
-                    <a href="https://www.behance.net/johndoe" target="_blank">Behance</a>
-                </div>
-            </div>
+    <main class="px-4 md:px-24 py-8">
+        <!-- Button Kembali -->
+        <div class="flex justify-start mb-4">
+            <a href="/portofolio.html" class="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                <i class="ph ph-arrow-left mr-2"></i>Kembali ke Portofolio
+            </a>
         </div>
 
-        <section class="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Branding for XYZ Company</h3>
+        <!-- Profil -->
+        <section class="bg-white shadow-md rounded-lg p-8">
+            <h1 class="text-4xl font-bold mb-6 text-gray-900">Premium Shopify Dropshipping Store</h1>
+            <div class="profile-container flex flex-col md:flex-row gap-8">
+                <img src="/assets/img/irfan-profile.jpg" alt="Irfan's Profile" class="profile-image rounded-full shadow-md w-48 h-48">
+                <div class="profile-info w-full md:w-2/3">
+                    <p class="bio text-lg text-gray-700 mb-4">
+                        Irfan adalah seorang ahli dalam membangun toko dropshipping premium berbasis Shopify. Dengan pengalaman lebih dari 5 tahun, Irfan telah membantu klien dari seluruh dunia mengoptimalkan bisnis e-commerce mereka dengan desain yang menarik, strategi pemasaran yang efektif, dan layanan pelanggan yang luar biasa.
+                    </p>
+                    <p class="expertise text-lg text-gray-700 mb-4">
+                        <strong class="text-gray-800">Expertise:</strong><br>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Shopify Dropshipping</li>
+                            <li>Custom Store Design</li>
+                            <li>Product Sourcing</li>
+                            <li>E-commerce Strategy</li>
+                        </ul>
+                    </p>
+                    <p class="contact text-lg text-gray-700 mb-4">
+                        <strong class="text-gray-800">Contact Information:</strong><br>
+                        Email: irfan.dropship@example.com<br>
+                        Phone: +123-456-7890
+                    </p>
+                    <div class="social-links text-lg mb-4">
+                        <a href="https://www.linkedin.com/in/irfan" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors mr-3">LinkedIn</a>|
+                        <a href="https://www.behance.net/irfan" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors ml-3">Behance</a>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>UX/UI Design for ABC App</h3>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="projects mt-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="project-item bg-gray-100 shadow-md rounded-lg p-4 text-center">
+                    <img src="/assets/img/Shopify-Homepage-1.jpeg" alt="Project 1" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Shopify Store</h3>
                 </div>
-                <div class="project-item">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Illustrations for Magazine</h3>
+                <div class="project-item bg-gray-100 shadow-md rounded-lg p-4 text-center">
+                    <img src="/assets/img/brandlogoabc.jpg" alt="Project 2" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Custom Branding for ABC</h3>
+                </div>
+                <div class="project-item bg-gray-100 shadow-md rounded-lg p-4 text-center">
+                    <img src="/assets/img/marketingdesign.avif" alt="Project 3" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Marketing Assets Design</h3>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ## FOOTER ## -->
+    <!-- FOOTER -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 lg:px-24">
-            <!-- ## Company ## -->
+            <!-- Content Footer -->
             <div class="flex flex-col gap-4">
-                <h1 class="text-2xl font-bold">Company</h1>
-                <div class="flex flex-col text-sm text-gray-500 footer-list">
-                    <a href="#">About idBiz</a>
-                    <a href="#">Help & Support</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Press & News</a>
-                    <a href="#">Partnerships</a>
-                    <a href="#">Affiliates</a>
-                </div>
-            </div>
-
-            <!-- ## Customer ## -->
-            <div class="flex flex-col gap-4">
-                <h1 class="text-xl font-bold">For Customer</h1>
-                <div class="flex flex-col text-sm text-gray-500 footer-list">
-                    <a href="#">How idBiz Works</a>
-                    <a href="#">idBiz Guides</a>
-                    <a href="#">idBiz Learn</a>
-                    <a href="#">idBiz Answers</a>
-                    <a href="#">Ask idBiz</a>
-                </div>
-            </div>
-
-            <!-- ## Designer ## -->
-            <div class="flex flex-col gap-4">
-                <h1 class="text-xl font-bold">For Designer</h1>
-                <div class="flex flex-col text-sm text-gray-500 footer-list">
-                    <a href="#">Become an idBiz Seller</a>
-                    <a href="#">Become an Agency</a>
-                    <a href="#">Community Hub</a>
-                    <a href="#">Forum</a>
-                    <a href="#">Events</a>
-                </div>
-            </div>
-
-            <!-- ## Categories ## -->
-            <div class="flex flex-col gap-4">
-                <h1 class="text-xl font-bold">Categories</h1>
-                <div class="flex flex-col text-sm text-gray-500 footer-list">
-                    <a href="#">Design Graphic</a>
-                    <a href="#">Photography</a>
-                    <a href="#">Filmatography</a>
-                    <a href="#">Editing</a>
-                    <a href="#">Programming</a>
-                </div>
+                <h1 class="text-2xl font-bold">idBiz</h1>
+                <p class="text-sm text-gray-500">Helping creators and businesses thrive through quality connections.</p>
             </div>
         </div>
-
-        <!-- ## COPYRIGHT ## -->
-        <div class="mx-4 lg:mx-24 mt-4 pt-2 text-gray-500 border-t border-gray-700">
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center md:items-baseline">
-                <div class="flex gap-4 items-baseline justify-center md:justify-start">
-                    <h1 class="font-bold text-2xl">idBiz.</h1>
-                    <p class="text-sm">© 2024 idBiz. All rights reserved.</p>
-                </div>
-
-                <div class="flex gap-4 justify-center md:justify-end">
-                    <i class="ph ph-instagram-logo text-2xl"></i>
-                    <i class="ph ph-facebook-logo text-2xl"></i>
-                    <i class="ph ph-discord-logo text-2xl"></i>
-                    <i class="ph ph-x-logo text-2xl"></i>
-                    <i class="ph ph-linkedin-logo text-2xl"></i>
-                    <div class="flex items-center gap-2 border border-gray-800 rounded-2xl px-2">
-                        <i class="ph ph-globe text-2xl"></i>
-                        <p class="text-md">English</p>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center mt-4 text-sm text-gray-500">
+            © 2024 idBiz. All rights reserved.
         </div>
     </footer>
-
-    <script src="js/view_detail.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/main.js"></script>
 </body>
 
 </html>

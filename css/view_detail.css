@@ -43,10 +43,11 @@ body {
 .designer-profile {
     padding: 40px 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 40px auto; /* Adjusted margin to create space above and below */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px; /* Added bottom margin for more space between footer */
 }
 
 .breadcrumb a {
