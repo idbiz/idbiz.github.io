@@ -1,4 +1,4 @@
-// Mock data for portofolio
+// Mock data for portfolio
 const portofolio = [
   {
     id: 1,
@@ -47,14 +47,13 @@ const portofolio = [
   },
 ];
 
-// Function to render portofolio dynamically
+// Function to render portfolio dynamically
 const renderPortofolio = () => {
   const grid = document.getElementById("portofolioGrid");
 
   // Clear grid before appending new content
   grid.innerHTML = "";
 
-  // Create and append each portofolio card dynamically
   portofolio.forEach((item) => {
     const card = document.createElement("div");
     card.className = "bg-white shadow-md rounded-lg overflow-hidden";
@@ -65,20 +64,30 @@ const renderPortofolio = () => {
         <h2 class="font-bold text-lg">${item.title}</h2>
         <p class="text-sm text-gray-600">by ${item.seller}</p>
         <p class="text-yellow-500 my-2">${"⭐".repeat(Math.round(item.rating))} (${item.reviews} reviews)</p>
-        <p class="font-bold text-blue-600">From Rp${item.price.toLocaleString('id-ID')}</p>
+        <p class="font-bold text-blue-600">From Rp${item.price}</p>
       </div>
       <div class="p-4 border-t">
-        <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full">
+        <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full view-details" data-id="${item.id}">
           View Details
         </button>
       </div>
     `;
 
-    // Append the created card to the grid
     grid.appendChild(card);
+  });
+
+  // Add event listener for "View Details" buttons
+  document.querySelectorAll(".view-details").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const itemId = parseInt(event.target.getAttribute("data-id"), 10);
+      const selectedItem = portofolio.find((item) => item.id === itemId);
+
+      if (selectedItem) {
+        localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+        window.location.href = "view_details.html";
+      }
+    });
   });
 };
 
-// Call render function to populate grid when the page loads
 document.addEventListener("DOMContentLoaded", renderPortofolio);
-
