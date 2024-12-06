@@ -13,30 +13,51 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-    <!-- NAVBAR -->
-    <nav class="flex items-center sticky top-0 backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <img class="rounded-full h-12 w-12" src="/assets/img/idbiz.png" alt="idBiz Logo" />
-                <h1 class="font-bold text-2xl">idBiz.</h1>
-            </div>
-            <div id="menu-collapse" class="text-2xl flex items-center justify-end md:hidden">
-                <i class="ph ph-list"></i>
-            </div>
-        </div>
-        <div class="md:col-span-2 mt-2 md:m-0 no-copy">
-            <ul id="menu-list" class="flex justify-between items-center text-xs md:text-md lg:text-lg gap-4 hidden md:flex">
-                <li><a href="/index.html" class="linked">Home</a></li>
-                <li><a href="/pages/about_us.html" class="linked">About Us</a></li>
-                <li><a href="#" class="linked">Services</a></li>
-                <li><a href="#" class="linked hidden md:block">Become a Seller</a></li>
-                <li class="cursor-default text-[#134B70] hidden md:block">|</li>
-                <li><a href="/pages/login.html" class="linked">Sign In</a></li>
-                <li><a href="/pages/login.html" class="btn linked-btn">Join</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- END NAVBAR -->
+      <!-- ## NAVBAR ## -->
+  <nav class="flex items-center top-0 sticky backdrop-blur-sm border-b border-gray-700 text-white bg-gray-900/80 
+  grid grid-cols-1 md:grid-cols-3 text-center px-2 xl:px-24 py-4 ">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img 
+          class="rounded-full h-12 w-12"
+          src="/assets/img/idbiz.png" 
+          alt=""
+        />
+        <h1 class="font-bold text-2xl">
+          idBiz.
+        </h1>
+      </div>
+      <div id="menu-collapse" class="text-2xl flex items-center align-center justify-end linked md:hidden">
+        <i class="ph ph-list"></i>
+      </div>
+    </div>
+
+    <div class="md:col-span-2 mt-2 md:m-0 no-copy">
+      <ul id="menu-list" class="flex justify-between items-center text-xs md:text-md lg:text-lg gap-4 hidden md:flex">
+        <li id="home" class="linked">
+          <a href="/index.html">Home</a>
+      </li>
+      <li id="abt-us" class="linked">
+          <a href="/pages/about_us.html">About Us</a>
+      </li>
+      <li class="linked">
+          <a href="">Services</a>
+      </li>
+      <li class="linked hidden md:block">
+          <a href="">Become a Seller</a>
+      </li>
+      <li class="cursor-default text-[#134B70] hidden md:block">|</li>
+      <li id="sign-in" class="linked">
+          <a href="/pages/login.html">Sign In</a>
+      </li>
+      <li id="join-in" class="btn linked-btn">
+          <a href="/pages/login.html">Join</a>
+      </li>
+      </ul>
+    </div>
+
+  </nav>
+  <!-- ## END NAVBAR ## -->
 
     <main class="px-4 md:px-24 py-8">
         <!-- Button Kembali -->
