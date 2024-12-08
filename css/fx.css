@@ -45,11 +45,14 @@
 #listing-map {
     width: 700px; /* Lebar map untuk layar besar */
     height: 500px; /* Tinggi map untuk layar besar */
-    margin: 0 auto; /* Memposisikan di tengah horizontal */
+    margin: 0 auto; /* Memposisikan di tengah secara horizontal */
     border: 1px solid #ccc; /* Opsional, untuk memberi border */
     border-radius: 10px; /* Opsional, untuk sudut melengkung */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, efek bayangan */
 }
+
+/* Pastikan kontainer body atau elemen yang lebih besar memiliki height penuh */
+
 
 /* Media query untuk layar kecil (seperti Android) */
 @media (max-width: 768px) {
@@ -68,4 +71,3 @@
         border-radius: 5px; /* Sudut lebih kecil */
     }
 }
-
