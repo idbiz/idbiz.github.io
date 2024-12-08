@@ -190,7 +190,7 @@
   <!-- about logo end-->
 
   <!-- founder session -->
-  <div class="flex flex-col justify-center items-center min-h-screen gap-8">
+  <div class="flex flex-col justify-center items-center min-h-screen gap-8 -mt-40">
     <h1
       class="text-2xl font-extrabold leading-9 tracking-tight mb-6 text-gray-100 sm:text-lg sm:leading-8 md:text-4xl md:leading-normal text-center">
       Founders
@@ -272,52 +272,41 @@
 
 
   <!-- find us/open layer -->
-  <div class="flex justify-center items-center flex-col -mt-10 px-4 sm:px-6 md:px-8">
-    <h1
-      class="text-2xl font-extrabold leading-9 tracking-tight mb-6 text-gray-100 sm:text-lg sm:leading-8 md:text-3xl md:leading-normal text-center">
-      Find us 
-    </h1>
-   
+  <div class="flex flex-col md:flex-row items-start md:items-center justify-center -mt-10 px-4 sm:px-6 md:px-8 -mt-20">
+    <!-- Teks Informasi -->
+    <div class="flex flex-col space-y-4 md:w-1/2">
+      <h1
+        class="text-2xl font-extrabold leading-9 tracking-tight mb-6 text-gray-100 sm:text-lg sm:leading-8 md:text-3xl md:leading-normal text-center">
+        Visit Our Location
+      </h1>
+      <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+        <div class="px-6 py-4">
+          <h3 class="text-lg font-medium text-white">Our Address</h3>
+          <p class="mt-1 text-white">Jl. Sariasih No.54, Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151</p>
+        </div>
+        <div class="border-t border-gray-200 px-6 py-4">
+          <h3 class="text-lg font-medium text-white">Contact</h3>
+          <p class="mt-1 text-white">Email: info@example.com</p>
+          <p class="mt-1 text-white">Phone: +1 23494 34993</p>
+          <!-- Button -->
+          <a href="https://id.biz.id/maps/" class="relative inline-block text-sm group mt-4">
+            <span
+              class="relative z-10 block px-3 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-md group-hover:text-white">
+              <span class="absolute inset-0 w-full h-full px-3 py-2 rounded-md bg-gray-50"></span>
+              <span
+                class="absolute left-0 w-36 h-36 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-8 bg-gray-900 group-hover:-rotate-180 ease"></span>
+              <span class="relative">More Detail Info</span>
+            </span>
+            <span
+              class="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-md group-hover:mb-0 group-hover:mr-0"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Peta -->
+    <div id="listing-map" class="w-full md:w-1/2 h-96 md:h-auto bg-gray-300"></div>
   </div>
-  <!-- open layer -->
-
-  <!-- menampilkan petapedia -->
-  <div id="listing-map"></div>
-  <!-- <p class="has-text-centered has-text-grey-dark">All rights reserved © PT. Informatika Digital Bisnis</p> -->
-   <!-- component -->
-<!-- component -->
-<div class="h-auto px-6 py-10 w-full">
-  <form>
-    <div class="max-w-sm mx-auto">
-      <div class="flex space-x-1 items-center mb-2">
-        <p class="text-white text-sm font-semibold">Max Distance</p>
-      </div>
-      <div class="flex rounded-md overflow-hidden w-full">
-      <div class="flex space-x-2">
-          <input id="maxDistance" class="w-full rounded-md rounded-r-none py-2 px-3" placeholder="Enter Radius" />
-          <button id="searchRegion" class="bg-indigo-600 text-white px-4 text-sm font-semibold py-3 rounded-r-md">Go</button>
-        </div>
-        <button class="bg-white px-4 text-sm font-semibold py-3 rounded-md">Clear</button>
-      </div>
-    </div>
-  </form>
-
-  <form>
-    <div class="max-w-sm mx-auto">
-      <div class="flex space-x-1 items-center mb-2">
-        <p class="text-white text-sm font-semibold">Region</p>
-      </div>
-      <div class="flex space-x-2">
-        <div class="flex rounded-md overflow-hidden w-full">
-          <input type="text" class="w-full rounded-md rounded-r-none py-2 px-3" placeholder="Enter region" />
-          <button id="searchRegion"class="bg-indigo-600 text-white px-4 text-sm font-semibold py-3 rounded-r-md">Go</button>
-        </div>
-        <button class="bg-white px-4 text-sm font-semibold py-3 rounded-md">Clear</button>
-      </div>
-    </div>
-  </form>
-</div>
-
+  
 
 
   <script type="module">
@@ -397,7 +386,7 @@
       <span class="block w-20 h-1 bg-white mx-auto mt-4"></span>
     </h2>
         
-      <h2 class="font-manrope text-4xl font-bold text-white text-center mb-14">NEWS</h2>
+    
       <div id="blog-container" class="flex justify-center mb-14 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
   <!-- Data dari API akan ditampilkan di sini -->
   <div>
