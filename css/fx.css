@@ -41,3 +41,12 @@
 .text-shadow {
     text-shadow: #7b00ff 0px 0px 150px;
 }
+
+#listing-map {
+    width: 700px; /* Lebar map lebih besar */
+    height: 500px; /* Tinggi map lebih besar untuk bentuk kotak */
+    margin: 0 auto; /* Memposisikan di tengah horizontal */
+    border: 1px solid #ccc; /* Opsional, untuk memberi border */
+    border-radius: 10px; /* Opsional, untuk sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, efek bayangan */
+}
