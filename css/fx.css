@@ -43,10 +43,29 @@
 }
 
 #listing-map {
-    width: 700px; /* Lebar map lebih besar */
-    height: 500px; /* Tinggi map lebih besar untuk bentuk kotak */
+    width: 700px; /* Lebar map untuk layar besar */
+    height: 500px; /* Tinggi map untuk layar besar */
     margin: 0 auto; /* Memposisikan di tengah horizontal */
     border: 1px solid #ccc; /* Opsional, untuk memberi border */
     border-radius: 10px; /* Opsional, untuk sudut melengkung */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, efek bayangan */
 }
+
+/* Media query untuk layar kecil (seperti Android) */
+@media (max-width: 768px) {
+    #listing-map {
+        width: 90%; /* Lebar 90% dari layar */
+        height: 300px; /* Tinggi lebih kecil untuk layar kecil */
+        border-radius: 8px; /* Sesuaikan sudut untuk estetika */
+    }
+}
+
+/* Media query untuk layar sangat kecil (seperti ponsel lama) */
+@media (max-width: 480px) {
+    #listing-map {
+        width: 95%; /* Lebar hampir penuh layar */
+        height: 250px; /* Tinggi lebih kecil */
+        border-radius: 5px; /* Sudut lebih kecil */
+    }
+}
+
