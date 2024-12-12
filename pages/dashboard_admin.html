@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="/js/fetch_user.js"></script>
+    
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#201E43]">
+    <!-- Wrapper -->
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-900 text-white flex flex-col shadow-lg">
+            <div class="py-6 px-4 text-center font-bold text-xl border-b border-blue-700">
+                <i class="fas fa-user-cog mr-2"></i>Admin Dashboard
+            </div>
+            <nav class="flex-1 mt-4">
+                <div class="relative group">
+                    <a href="#" class="block py-3 px-6 hover:bg-blue-700 transition-all">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </a>
+                    <div class="absolute hidden group-hover:block bg-blue-700 text-white mt-1 w-full">
+                        <a href="#" onclick="showTable('design-category')" class="block py-3 px-6 hover:bg-blue-600">
+                            <i class="fas fa-palette mr-2"></i>Design-Category
+                        </a>
+                        <a href="#" onclick="showTable('feedback')" class="block py-3 px-6 hover:bg-blue-600">
+                            <i class="fas fa-comments mr-2"></i>Feedback
+                        </a>
+                        <a href="#" onclick="showTable('pembayaran')" class="block py-3 px-6 hover:bg-blue-600">
+                            <i class="fas fa-wallet mr-2"></i>Pembayaran
+                        </a>
+                        <a href="#" onclick="showTable('pemesanan')" class="block py-3 px-6 hover:bg-blue-600">
+                            <i class="fas fa-receipt mr-2"></i>Pemesanan
+                        </a>
+                        <a href="#" onclick="showTable('portofolio')" class="block py-3 px-6 hover:bg-blue-600">
+                            <i class="fas fa-briefcase mr-2"></i>Portofolio
+                        </a>
+                    </div>
+                </div>
+                <a href="#" onclick="showTable('users')" class="block py-3 px-6 hover:bg-blue-700 transition-all">
+                    <i class="fas fa-users mr-2"></i>Users
+                </a>
+                <a href="#" class="block py-3 px-6 hover:bg-blue-700 transition-all">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 bg-white shadow-md rounded-lg m-4">
+            <!-- Header -->
+            <header class="bg-blue-800 text-white py-4 px-6 flex justify-between items-center rounded-t-lg">
+                <h1 class="text-2xl font-bold"><i class="fas fa-home mr-2"></i>Dashboard</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="text-sm">Welcome, </div>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="w-10 h-10 rounded-full border-2 border-white">
+                </div>
+            </header>
+            
+            
+
+            <!-- Dashboard Content -->
+            <div class="p-6">
+                <div id="tables">
+                  <!-- Design Category Table -->
+            <div id="design-category" class="hidden">
+                <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Design Category Table</h2>
+                <div class="flex justify-between mb-4">
+                    <button id="add-design-category" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <i  class="fas fa-plus mr-2"></i>Tambah Design Category
+                    </button>
+                </div>
+                <table class="w-full border rounded-lg overflow-hidden">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-3 text-left font-medium text-gray-700">ID</th>
+                            <th class="px-4 py-3 text-left font-medium text-gray-700">Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100 border-b">
+                            <td class="px-4 py-2"></td>
+                            <td class="px-4 py-2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="design-category-form" class="hidden mt-4">
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="design-category-name">Nama Kategori</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="design-category-name" type="text" placeholder="Nama Kategori">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Simpan</button>
+                            <button id="cancel-design-category" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" type="button">Batal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <!-- Portofolio Table -->
+                <div id="portofolio" class="hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Portofolio Table</h2>
+                    <div class="flex justify-between mb-4">
+                        <button id="add-portofolio" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            <i class="fas fa-plus mr-2"></i>Tambah Portofolio
+                        </button>
+                    </div>
+                    <table class="w-full border rounded-lg overflow-hidden">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">ID</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Category</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Design Title</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Design Description</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Design Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-100 border-b">
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="portofolio-form" class="hidden mt-4">
+                        <form>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="portofolio-name">Category</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="portofolio-name" type="text" placeholder="Nama Portofolio">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="portofolio-name">Design Title</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="portofolio-name" type="text" placeholder="Nama Portofolio">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="portofolio-name">Design Description</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="portofolio-name" type="text" placeholder="Nama Portofolio">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="portofolio-name">Design Image</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="portofolio-name" type="text" placeholder="Nama Portofolio">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Simpan</button>
+                                <button id="cancel-portofolio" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" type="button">Batal</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                    
+                <div id="pemesanan" class="hidden">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Pemesanan Table</h2>
+                    <table class="w-full border rounded-lg overflow-hidden">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">ID</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Nama</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Email</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Nomor HP</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Category</th>
+                                <th class="px-4 py-3 text-left font-medium text-gray-700">Order Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-100 border-b">
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                                <td class="px-4 py-2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- feedback table -->
+                    <div id="feedback" class="hidden">
+                        <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Feedback Table</h2>
+                        <table class="w-full border rounded-lg overflow-hidden">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">ID</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Category</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Comment</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-100 border-b">
+                                    <td class="px-4 py-2"></td>
+                                    <td class="px-4 py-2"></td>
+                                    <td class="px-4 py-2"></td>
+                                    <td class="px-4 py-2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- users table -->
+                    <div id="users" class="hidden">
+                        <h2 class="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Users Table</h2>
+                        <table class="w-full border rounded-lg overflow-hidden">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">ID</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Name</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Nomor HP</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Email</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Role</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Password</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Team</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Scope</th>
+                                    <th class="px-4 py-3 text-left font-medium text-gray-700">Jumlah Antrian</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user-tbody">
+                                <!-- Dynamic rows will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <
+
+    <script>
+        // Tambah Design Category
+document.getElementById('add-design-category').addEventListener('click', function() {
+    document.getElementById('design-category-form').classList.remove('hidden');
+});
+
+// Batal Tambah Design Category
+document.getElementById('cancel-design-category').addEventListener('click', function() {
+    document.getElementById('design-category-form').classList.add('hidden');
+});
+
+
+// Tambah Portofolio
+document.getElementById('add-portofolio').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('portofolio-form').classList.remove('hidden');
+});
+
+// Batal Tambah Portofolio
+document.getElementById('cancel-portofolio').addEventListener('click', function() {
+    document.getElementById('portofolio-form').classList.add('hidden');
+});
+
+        function showTable(tableId) {
+            const tables = document.querySelectorAll('#tables > div');
+            tables.forEach(table => {
+                if (table.id === tableId) {
+                    table.classList.remove('hidden');
+                } else {
+                    table.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+    
+</body>
+</html>
