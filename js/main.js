@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const home = document.getElementById('home');
 const aboutUs = document.getElementById('abt-us');
 const signIn = document.getElementById('sign-in');
-const join = document.getElementById('join-in');
+const join = document.getElementById('join');
 const catalog = document.querySelector('.mansory');
 
 home.addEventListener('click', () => {
@@ -63,7 +63,7 @@ signIn.addEventListener('click', () => {
 });
 
 join.addEventListener('click', () => {
-    window.location.href = '/LoginPage';
+    window.location.href = '/loginadmin';
 });
 
 catalog.addEventListener('contextmenu', function (e) {
